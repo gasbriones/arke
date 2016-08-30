@@ -1,0 +1,55 @@
+<fields name="giftcertificate">
+	<field name="product_sku"
+		type="text"
+		size="25"
+		label="COM_CSVI_EXPORT_AWO_PRODUCT_SKU_LABEL"
+		description="COM_CSVI_EXPORT_AWO_PRODUCT_SKU_DESC"
+		default="" />
+
+	<field name="template"
+		type="sql"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_TEMPLATE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_TEMPLATE_DESC"
+		query="SELECT #__awocoupon.id AS value,
+				#__awocoupon.coupon_code AS text
+				FROM #__awocoupon
+				WHERE published = '-2'"
+		key_field="value"
+		value_field="text"
+		translate="true"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+
+	<field name="profile"
+		type="sql"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_PROFILE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_PROFILE_DESC"
+		query="SELECT #__awocoupon_profile.id AS value,
+				#__awocoupon_profile.title AS text
+				FROM #__awocoupon_profile"
+		key_field="value"
+		value_field="text"
+		translate="true"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+
+	<field name="estore"
+		type="sql"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_ESTORE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_ESTORE_DESC"
+		query="SELECT #__awocoupon_giftcert_product.estore AS value,
+				#__awocoupon_giftcert_product.estore AS text
+				FROM #__awocoupon_giftcert_product
+				GROUP BY estore"
+		key_field="value"
+		value_field="text"
+		translate="true"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+</fields>

@@ -1,0 +1,35 @@
+	<fields name="property">
+		<field name="update_based_on"
+			type="text"
+			size="15"
+			label="COM_CSVI_EZREALTY_UPDATE_BASED_ON_LABEL"
+			description="COM_CSVI_EZREALTY_UPDATE_BASED_ON_DESC"
+			default="id">
+		</field>
+
+		<field name="unpublish_before_import"
+			type="list"
+			size="1"
+			label="COM_CSVI_UNPUBLISH_BEFORE_IMPORT_LABEL"
+			description="COM_CSVI_UNPUBLISH_BEFORE_IMPORT_DESC"
+			default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="unpublish_based_on"
+			type="text"
+			size="15"
+			label="COM_CSVI_EZREALTY_UNPUBLISH_BASED_ON_LABEL"
+			description="COM_CSVI_EZREALTY_UNPUBLISH_BASED_ON_DESC"
+			default="">
+		</field>
+
+		<field name="unpublish_value"
+			type="text"
+			size="25"
+			label="COM_CSVI_EZREALTY_UNPUBLISH_VALUE_LABEL"
+			description="COM_CSVI_EZREALTY_UNPUBLISH_VALUE_DESC"
+			default="">
+		</field>
+	</fields>

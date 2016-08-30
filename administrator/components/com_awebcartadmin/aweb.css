@@ -1,0 +1,78 @@
+.lefttop
+{
+position:relative;
+float:left;
+width:32%;
+text-align:center;
+}
+
+.lefttop table
+{
+border: 10px groove #2E8B57;
+width:50%;
+margin:auto;
+}
+.lefttop td,.lefttop tr,.lefttop th
+{
+padding:10px;
+}
+.functionslabel
+{
+font-size:20px;
+text-align:left;
+
+}
+.sizenumber
+{
+font-size:25px;
+}
+
+.deleteempty input
+{
+font-size: 13px;
+margin: 10px;
+padding: 10px;
+border: 2px outset #2E8B57;
+}
+
+
+.deleteempty input:hover
+{
+font-size: 13px;
+margin-top: 10px;
+padding: 10px;
+border: 2px inset #2E8B57;
+
+}
+
+
+.righttop
+{
+position:relative;
+float:right;
+width:65%;
+height:100%;
+text-align:center;
+}
+
+.righttop table
+{
+width:100%;
+border: 3px double #2E8B57;
+}
+
+.righttop tr, .righttop td, .righttop th
+{
+width:30%;
+border:1px solid grey;
+} 
+.logo
+{
+   color: #2E8B57 !important;
+    font-size: 27px;
+	 font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+	font-family:verdana;
+	margin-bottom:30px;
+}

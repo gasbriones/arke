@@ -1,0 +1,11 @@
+	<fields name="image">
+		<field name="process_image"
+			type="list"
+			size="1"
+			label="COM_CSVI_PROCESS_IMAGE_LABEL"
+			description="COM_CSVI_PROCESS_IMAGE_DESC"
+			default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fields>

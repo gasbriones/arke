@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="administrator" version="2.5.0" method="upgrade">
+	<name>JS Virtuemart Quickicons</name>
+	<author>JoomSpot</author>
+	<creationDate>March 14th, 2013</creationDate>
+	<authorEmail>info@joomspot.net</authorEmail>
+	<authorUrl>http://www.joomspot.net</authorUrl>
+	<version>2.5.0a</version>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>JSVM_DESCRIPTION</description>
+	
+	<files>
+		<filename module="mod_jsvm_quickicons">mod_jsvm_quickicons.php</filename>
+		<filename>index.html</filename>
+		<filename>default_quickicons.php</filename>
+		<folder>tmpl</folder>
+		<folder>icons</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jsvm_quickicons.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jsvm_quickicons.sys.ini</language>
+	</languages>
+		
+</extension>

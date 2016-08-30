@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+    <name>SJ Topbar</name>
+    <creationDate>April 2014</creationDate>
+    <author>YouTech Company</author>
+    <copyright>Copyright (c) 2014 YouTech Company</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>contact@ytcvn.com</authorEmail>
+    <authorUrl>http://www.smartaddons.com</authorUrl>
+    <version>1.0.0</version>
+    <description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_sj_topbar">mod_sj_topbar.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>core</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages/>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_sj_topbar/core/fields">
+            <fieldset name="basic" >
+                <field name="container_width" type="text" default="942" label="Width Container"
+                       description="Width Container" />
+				<field name="position_show" type="radio" class="btn-group" default="1" label="Position"
+			   description="Position">
+					<option value="1">Top</option>
+					<option value="0">Bottom</option>
+				</field>
+				<field name="on_top" type="radio" class="btn-group" default="0" label="On Top"
+			   description="On Top for Position Top">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="content_topbar" type="textarea" default="Enter content to show!" label="Content"
+                       description="Content" cols="40" rows="4" filter="raw"/>
+				<field type="sjheading" label="Button Options"/>
+				<field name="display_btn" type="radio" class="btn-group" default="1" label="Display Button"
+                       description="Display button view offer">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+				<field name="link_btn" type="text" default="https://smartaddons.com" label="Link for Button"
+                       description="Link for button view offer"/>
+				<field name="target_btn" type="list" default="_self" label="Link Target"
+				       description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+				</field>					   
+				<field type="sjheading" label="Date Options"/>
+                <field name="display_countdown" type="radio" class="btn-group" default="1" label="Display Countdown"
+                       description="Display Countdown">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="start_date" type="calendar" default="2014-05-05 19:30:30" format="%Y-%m-%d %H:%M:%S" label="Start Date"
+			   description="Start Date"/>
+				<field name="end_date" type="calendar" default="2014-07-05 19:30:30" format="%Y-%m-%d %H:%M:%S" label="End Date"
+			   description="End Date"/>
+				<field name="gettimezone" type="timezone" default="+7" label="Select a Timezone" description="Select a Timezone" />		
+                <field type="sjheading" label="Panel Options"/>
+                <field name="display_panel" type="list" class="btn-group" default="1" label="Display Panel"
+                       description="Display Panel">
+                    <option value="1">Show</option>
+                    <option value="2">Show and Close</option>
+					<option value="3">Instantaneous</option>
+                </field>
+                <field name="time_cookie" type="text" default="1" label="Time Cookie"
+                       description="For Display Panel Instantaneous and Show and Close. Example: 1 hour"/>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="include_jquery" type="radio" class="btn-group" default="0"
+                       label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="custom_css" type="textarea" default="" label="Custom Css"
+			   description="Custom Css" cols="40" rows="4" filter="raw"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

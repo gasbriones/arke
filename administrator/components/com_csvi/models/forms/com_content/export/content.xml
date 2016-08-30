@@ -1,0 +1,31 @@
+	<fields name="general">
+		<field name="content_language"
+			type="contentlanguage"
+			size="1"
+			label="COM_CSVI_CONTENT_LANGUAGE_LABEL"
+			description="COM_CSVI_CONTENT_LANGUAGE_DESC">
+			<option value="*">JALL</option>
+		</field>
+	</fields>
+
+	<fields name="content">
+		<field name="exportsef"
+			type="list"
+			size="1"
+			label="COM_CSVI_EXPORT_PRODUCT_SEF_LABEL"
+			description="COM_CSVI_EXPORT_PRODUCT_SEF_DESC"
+			default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="content_categories"
+			size="7"
+			type="category"
+			extension="com_content"
+			label="COM_CSVI_EXPORT_PRODUCT_CATEGORY_LABEL"
+			description="COM_CSVI_EXPORT_PRODUCT_CATEGORY_DESC"
+			multiple="true">
+			<option value="*">JALL</option>
+		</field>
+	</fields>

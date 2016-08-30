@@ -1,0 +1,8 @@
+	<fields name="general">
+		<field name="category_separator"
+			type="text"
+			size="2"
+			label="COM_CSVI_CATEGORY_SEPARATOR_LABEL"
+			description="COM_CSVI_CATEGORY_SEPARATOR_DESC"
+			default="/" />
+	</fields>

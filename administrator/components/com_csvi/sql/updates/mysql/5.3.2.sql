@@ -1,0 +1,2 @@
+UPDATE `#__csvi_template_types` SET `options`='product_file,fields,product,image,product_path,limit' WHERE `template_type_name` = 'productimport' AND `template_type` = 'import' AND `component` = 'com_virtuemart';
+UPDATE `#__csvi_template_types` SET `options`='file,fields,content,layout,email,limit' WHERE `template_type_name` = 'contentexport' AND `template_type` = 'export' AND `component` = 'com_content';

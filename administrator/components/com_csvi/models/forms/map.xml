@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<field name="id" type="hidden" />
+
+		<field name="name"
+			type="text"
+			size="55"
+			label="COM_CSVI_TEMPLATE_TYPE_NAME_LABEL"
+			description="COM_CSVI_TEMPLATE_TYPE_NAME_DESC"
+			required="true"
+			class="inputbox" />
+
+		<field name="mapfile"
+			type="file"
+			size="150"
+			label="COM_CSVI_MAPFILE_LABEL"
+			description="COM_CSVI_MAPFILE_DESC"
+			required="false"
+			class="inputbox" />
+	</fields>
+	<fields name="options">
+		<field name="action"
+			type="list"
+			size="1"
+			default="import"
+			label="COM_CSVI_PROCESS_ACTIONS_LABEL"
+			description="COM_CSVI_PROCESS_ACTIONS_DESC"
+			onchange="Csvi.loadTemplateTypes();">
+				<option value="import">COM_CSVI_IMPORT</option>
+				<option value="export">COM_CSVI_EXPORT</option>
+		</field>
+
+		<field name="component"
+			type="sql"
+			size="1"
+			default=""
+			label="COM_CSVI_PROCESS_COMPONENT_LABEL"
+			description="COM_CSVI_PROCESS_COMPONENT_DESC"
+			query="SELECT t.component AS value, CONCAT('COM_CSVI_', UPPER(t.component)) AS text
+					FROM #__csvi_template_types t
+					LEFT JOIN #__extensions e ON t.component = e.element
+					WHERE t.published = 1
+					GROUP BY t.component
+					ORDER BY t.ordering"
+			key_field="value"
+			value_field="text"
+			translate="true"
+			onchange="Csvi.loadTemplateTypes();">
+				<option value="">COM_CSVI_SELECT_COMPONENT</option>
+		</field>
+
+		<field name="operation"
+			type="CsviOperations"
+			size="1"
+			default=""
+			label="COM_CSVI_PROCESS_OPERATION_LABEL"
+			description="COM_CSVI_PROCESS_OPERATION_DESC"
+			onchange="jQuery('#fieldmap').remove(); jQuery('#fieldchange').show();">
+				<option value="">COM_CSVI_SELECT_OPERATION</option>
+		</field>
+	</fields>
+</form>

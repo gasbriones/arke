@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.3">
+
+<name>COM_EXCELCSV_EXPORT_USERS</name>
+<author>UkrSolution</author>
+<creationDate></creationDate>
+<copyright>(C) 2014. All rights reserved.</copyright>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<authorEmail>ukrsolution@gmail.com</authorEmail>
+<authorUrl>https://www.ukrsolution.com</authorUrl>
+
+<version>1.4.2</version>
+<releaseDate>2015201520152015-0404-0303</releaseDate>
+<releaseType>Major update</releaseType>
+
+<description>This extension will help you to export (download) users from your Joomla to Excel or CSV file. User friendly interface allows to do export with the least effort.</description>
+
+
+<administration>
+
+<languages folder="admin">
+	<language tag="en-GB">languages/en-GB.com_excelcsv_export_users.ini</language>
+	<language tag="en-GB">languages/en-GB.com_excelcsv_export_users.sys.ini</language>
+</languages>
+
+
+<menu img="components/com_excelcsv_export_users/img/export_icon.png">COM_EXCELCSV_EXPORT_USERS</menu>
+
+<submenu>
+	<menu link="option=com_excelcsv_export_users" img="components/com_excelcsv_export_users/img/export_icon.png" >COM_EXCELCSV_EXPORT_PROFILE</menu>
+	<menu link="option=com_excelcsv_export_users&amp;task=create" img="components/com_excelcsv_export_users/img/export_icon.png" view="help">COM_EXCELCSV_EXPORT_PROFILE_CREATE</menu>
+	<menu link="option=com_excelcsv_export_users&amp;task=help" img="components/com_excelcsv_export_users/img/menu_help.png" view="help">COM_EXCELCSV_EXPORT_HELP</menu>
+	<menu link="option=com_excelcsv_export_users&amp;task=subscr" img="components/com_excelcsv_export_users/img/export_icon.png" view="help">COM_EXCELCSV_EXPORT_SUPPORT</menu>
+</submenu>
+
+
+<files folder="admin">
+	<filename>LICENSE.txt</filename>
+	<filename>controller.php</filename>
+	<folder>css</folder>
+	<filename>excelcsv_export_users.php</filename>
+	<folder>img</folder>
+	<filename>index.html</filename>
+	<folder>js</folder>
+	<folder>languages</folder>
+	<folder>library</folder>
+	<folder>models</folder>
+	<folder>tmp</folder>
+	<folder>views</folder>
+</files>
+</administration>
+
+<updateservers>
+	<server type="extension" priority="1" name="Export Update">http://www.ukrsolution.com/CheckUpdates/Export-Users-From-Joomla-To-Excel-CSV-File.xml</server>
+</updateservers>
+</extension>

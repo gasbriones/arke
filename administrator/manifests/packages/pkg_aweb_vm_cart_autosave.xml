@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.77">
+	<name>Cart AutoSave for VirtueMart</name>
+	<packagename>aweb_vm_cart_autosave</packagename>
+	<version>1.77</version>
+	<url>http://awebsupport.com</url>
+	<packager>aWebSupport Team</packager>
+	<author>aWebSupport Team</author>
+	<packagerurl>http://awebsupport.com</packagerurl>
+	<authorurl>http://awebsupport.com</authorurl>
+	<description>aWebSupport Team</description>
+	<update>http://awebsupport.com</update>
+	<creationDate>2014-12-11</creationDate>
+	<files>		
+		<file type="plugin" id="aweb_recallcart">aweb_recallcart.zip</file>
+		<file type="plugin" id="aweb_cart_autosave">aweb_cart_autosave.zip</file>
+	</files>
+</extension>

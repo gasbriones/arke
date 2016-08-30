@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7.0" type="plugin" group="system" method="upgrade">
+	<name>System - Administration Brand Remover Plugin</name>
+	<creationDate>November 14, 2012</creationDate>
+	<author>emkt.mx</author>
+	<authorEmail>fernando@publi20.com</authorEmail>
+	<authorUrl>http://emkt.mx</authorUrl>
+	<copyright>(C) 2009 - 2014 emkt.mx All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.1</version>
+	<description>Remove all Administration Branding from your site, and gives it a different look. <![CDATA[ <br> ]]> For installation: Enable this plugin in Plugin Manager &gt; Type System <![CDATA[ <br> ]]> For comments please contact us: <![CDATA[ <a href=http://emkt.mx/ku target=_blank rel=jbrandremover title=marketing&nbsp;digital&nbsp;mexico> ]]>http://emkt.mx/ku<![CDATA[ </a> ]]> </description>
+	<files>
+		<filename plugin="jbrandremover">jbrandremover.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="admincss" type="textarea" rows="10" cols="30" default="#border-top.h_blue{background:#f4f4f4;box-shadow:0 -20px 20px white inset;border-radius:3px 3px 0 0;border-left:1px solid #dcdcdc;border-top:1px solid #dcdcdc;border-right:1px solid #dcdcdc}#border-top .title,#border-top .title a{font-size:1.364em;font-weight:700;color:gray;font-weight:lighter;line-height:57px;padding-left:14px;text-decoration:none;text-shadow:1px 1px 2px white}#border-top .logo{display:none}#footer{display:none}body>p{display:none}.m>h1{display:none}label#mod-login-password-lbl,label#mod-login-username-lbl,label#mod-login-language-lbl{display:block;margin:5px 15px 16px 0;padding-top:5px;padding-bottom:10px}input#mod-login-username,input#mod-login-password,select#lang{float:right;margin:0 0 20px;clear:right;min-width:145px;padding:7px;font-size:13px}#lock{background:0;width:150px;height:172px}" label="Advanced Edit" description="The custom code that make the changes to Administration, edit it to suit your specific needs." />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

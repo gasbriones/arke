@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+  <name>MOD_VMACCORDEONMENU</name>
+  <author>Gruz</author>
+  <creationDate>2013-07-17</creationDate>
+  <copyright/>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>arygroup@gmail.com</authorEmail>
+  <authorUrl>gruz.org.ua</authorUrl>
+  <version>1.0.7</version>
+  <description>MOD_VMACCORDEONMENU_DESC</description>
+  <files>
+    <folder>language</folder>
+    <folder>assets</folder>
+    <folder>tmpl</folder>
+    <folder>fields</folder>
+    <filename module="mod_vmaccordionmenu">mod_vmaccordionmenu.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/administrator/components/com_virtuemart/elements">
+      <fieldset name="basic" addfieldpath="/modules/mod_vmaccordionmenu/fields">
+        <field name="version" type="version" extension="VMACCORDIONMENU" xml="/modules/mod_vmaccordionmenu/mod_vmaccordionmenu.xml"/>
+        <field name="parent_category_id" type="vmcategories" value_field="category_name" label="MOD_VMACCORDEONMENU_FIELD_CATEGORY_PARENT_CATEGORY_LABEL" description="MOD_VMACCORDEONMENU_FIELD_CATEGORY_PARENT_CATEGORY_DESC"/>
+        <!--
+			<field name="endLevel" type="text" default="0" size="5" label="MOD_VMACCORDEONMENU_FIELD_END_LEVEL_LABEL" description="MOD_VMACCORDEONMENU_FIELD_END_LEVEL_DESC" />
+			-->
+        <field name="activate_hovering" type="radio" default="1" label="MOD_VMACCORDEONMENU_FIELD_ACTIVATE_HOVERING_LABEL" description="MOD_VMACCORDEONMENU_FIELD_ACTIVATE_HOVERING_DESC">
+          <option value="0">JDISABLED</option>
+          <option value="1">JENABLED</option>
+        </field>
+        <field name="hover_time" type="text" default="200" label="MOD_VMACCORDEONMENU_FIELD_HOVER_TIME_LABEL" description="MOD_VMACCORDEONMENU_FIELD_HOVER_TIME_DESC"/>
+        <field name="duration_time" type="text" default="400" label="MOD_VMACCORDEONMENU_FIELD_DURATION_TIME_LABEL" description="MOD_VMACCORDEONMENU_FIELD_DURATION_TIME_DESC"/>
+        <field name="show_images" type="radio" default="0" label="MOD_VMACCORDEONMENU_FIELD_SHOW_IMAGES_LABEL" description="MOD_VMACCORDEONMENU_FIELD_SHOW_IMAGES_DESC">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+        <field name="plus_image" type="text" default="modules/mod_vmaccordionmenu/assets/plus.gif" label="MOD_VMACCORDEONMENU_FIELD_PLUS_IMAGE_LABEL" description=""/>
+        <field name="minus_image" type="text" default="modules/mod_vmaccordionmenu/assets/minus.gif" label="MOD_VMACCORDEONMENU_FIELD_MINUS_IMAGE_LABEL" description=""/>
+        <field name="hide_list_style" type="radio" default="1" label="MOD_VMACCORDEONMENU_FIELD_HIDE_LIST_STYLE_LABEL" description="MOD_VMACCORDEONMENU_FIELD_HIDE_LIST_STYLE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <!--
+        <field name="tag_id" type="text" default="" label="MOD_VMACCORDEONMENU_FIELD_MENU_TAG_ID_LABEL" description="MOD_VMACCORDEONMENU_FIELD_MENU_TAG_ID_DESC"/>
+        -->
+        <field name="menuclass_sfx" type="text" default="" label="MOD_VMACCORDEONMENU_FIELD_MENUCLASS_SFX_LABEL" description="MOD_VMACCORDEONMENU_FIELD_MENUCLASS_SFX_DESC"/>
+      </fieldset>
+      <fieldset name="VMACCORDEON_APPEARENCE_GROUP" description="MOD_VMACCORDEON_APPEARENCE_GROUP_DESC">
+        <field name="custom_css" type="textarea" cols="30" rows="10" default="" label="MOD_VMACCORDEONMENU_FIELD_CUSTOM_CSS_LABEL" description=""/>
+        <field type="spacer" hr="true"/>
+        <field name="show_path_bold" type="radio" default="0" label="MOD_VMACCORDEONMENU_FIELD_SHOW_PATH_BOLD_LABEL" description="MOD_VMACCORDEONMENU_FIELD_SHOW_PATH_BOLD_DESC">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+        <field name="current_text_color" type="text" default="#ff0000" label="MOD_VMACCORDEONMENU_FIELD_CURRENT_TEXT_COLOR_LABEL" description="MOD_VMACCORDEONMENU_FIELD_CURRENT_TEXT_COLOR_DESC"/>
+        <field type="spacer" hr="true"/>
+        <field name="highlite_line" type="radio" default="0" label="MOD_VMACCORDEONMENU_FIELD_HIGHLITE_LINE_STYLE_LABEL" description="MOD_VMACCORDEONMENU_FIELD_HIGHLITE_LINE_STYLE_DESC">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+        <field name="hover_bg_color" type="text" default="#aaaaaa" label="MOD_VMACCORDEONMENU_FIELD_HOVER_BG_COLOR_LABEL" description="MOD_VMACCORDEONMENU_FIELD_HOVER_BG_COLOR_DESC"/>
+        <field name="active_bg_color" type="text" default="#f8f8f8" label="MOD_VMACCORDEONMENU_FIELD_ACTIVE_BG_COLOR_LABEL" description="MOD_VMACCORDEONMENU_FIELD_ACTIVE_BG_COLOR_DESC"/>
+        <field name="current_bg_color_bg_color" type="text" default="#ff0000" label="MOD_VMACCORDEONMENU_FIELD_CURRENT_BG_COLOR_LABEL" description="MOD_VMACCORDEONMENU_FIELD_CURRENT_BG_COLOR_DESC"/>
+        <!-- Disabeling module cache { -->
+        <field name="cache" type="hidden" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="hidden" default="0" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="itemid">
+          <option value="itemid"/>
+        </field>
+        <!-- Disabeling module cache } -->
+      </fieldset>
+      <!--
+      <fieldset name="advanced">
+      </fieldset>
+      !-->
+    </fields>
+  </config>
+  <updateservers>
+    <servers type="extension" priority="1" name="vmaccordionmenu">http://gruz.org.ua/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=9&amp;dummy=extension.xml</servers>
+  </updateservers>
+</extension>
